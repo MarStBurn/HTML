@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="Lab_3JS.css">
+<title>Стафеева М. В., гр. 0048</title>
+</head>
+<body>
+<table>
+<form name="formpage" action="http://192.168.32.150/study/lab7/index.php">
+<caption>Параметры настройки сайта</caption>
+    <tr><td>Адрес сайта</td><td><label><input size="50" type="text" name="adr" maxlength="100" placeholder="Адрес сайта"></label></td></tr>
+    <tr><td>Владелец сайта</td><td><label><input size="50" type="text" name="own" maxlength="50" placeholder="Владелец сайта"></label></td></tr>
+    <tr>
+    <td>Пароль</td><td><label><input size="25" type="password" name="passwd" maxlength="20" placeholder="Пароль"></label></td>
+    </tr>
+     <tr>
+     <td>e-mail</td><td><label><input size="25" type="email" name="email" maxlength="25" placeholder="E-mail"></label></td>
+     </tr>
+     <tr>
+     <td>Связать сайт с социальными сетями </td>
+		<td><input name="vk"type="checkbox">VK<br>
+			<input name="whatsapp"type="checkbox">WhatsApp<br>
+			<input name="telegram"type="checkbox">Telegram<br>
+      </tr>
+      
+    <tr>
+	<td>Язык сайта</td>
+	<td><input type="radio" name="lang" value="RUS">Русский
+		<input type="radio" name="lang" value="ENG">Английский</td>
+    </tr>
+    <tr>
+	<td>Загрузить логотип</td>
+    <td><input name="attach" type="file"></td>
+    </tr>
+    <tr> 
+	<td>Дополнительные сведения о создателях </td>
+		<td><textarea name="content" cols="40" rows="10" ></textarea></td>
+    </tr>
+    <tr><td><input type="button" value='Сохранить настройки' onclick="check()"></td></tr>
+</form>
+
+<script>
+function check() {
+if (document.formpage.adr.value=="") {
+alert("Введите адрес");
+return false;
+}
+if (document.formpage.own.value=="") {
+alert("Укажите владельца");
+return false;
+}
+if (document.formpage.passwd.value=="") {
+alert("Введите пароль");
+return false;
+}
+if (document.formpage.email.value=="") {
+alert("Введите почту");
+return false;
+}
+document.formpage.submit(); 
+}
+</script>
+</table>
+</body>
+</html>

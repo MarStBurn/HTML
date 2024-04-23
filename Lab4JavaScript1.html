@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="Lab_4JS1.css">
+<title>Стафеева М. В., гр. 0048</title>
+</head>
+<body>
+
+<div class = "hedge1">Обыкнове́нный ёж, или европе́йский ёж, или среднеру́сский ёж (лат. Erinaceus europaeus) — вид млекопитающих из рода евразийских ежей семейства ежовых. Обитает в широколиственных лесах Западной и Центральной Европы, в том числе на Британских островах и в южной Скандинавии, а также в северных и центральных районах европейской части России; интродуцирован в Новую Зеландию </div>
+
+<div class = "hedgehog" id = "move"><img width="250px" height="250px" src="../вебпр/thumb165543.jpg"></div>
+
+<div class = "hedge2">Обыкновенные ежи — довольно быстро передвигающиеся животные для своих размеров. Они способны бегать со скоростью до 3 м/с, хорошо плавают и прыгают. При ходьбе и беге ступают на землю всей ступнёй.</div>
+
+<script>
+document.getElementById("move").onclick = function() {
+let start = Date.now();
+let timer = setInterval(function() {
+let timePassed = Date.now() - start;
+move.style.left = timePassed / 2 + 'px';
+if (timePassed > 3000) clearInterval(timer); }, 10);
+	}
+
+</script>
+</body>
+</html>
